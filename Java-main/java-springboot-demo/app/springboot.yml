@@ -27,7 +27,7 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: 'java-springboot-demo/app/pom.xml'
+        mavenPomFile: 'Java-main/java-springboot-demo/app/pom.xml'
         goals: 'clean package -DskipTests'
 
     # ✅ Ensure Docker is installed

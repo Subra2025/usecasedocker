@@ -3,7 +3,7 @@ trigger:
 
 variables:
   azureSubscription: 'springboot'
-  webAppName: 'java-spring-boot'
+  webAppName: 'subrafirstapp'
   containerRegistry: 'springboot1506'
   imageName: 'spring-boot-demo'
 

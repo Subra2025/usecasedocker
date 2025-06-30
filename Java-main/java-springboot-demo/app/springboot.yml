@@ -4,7 +4,7 @@ trigger:
 variables:
   azureSubscription: 'SubraDockerServiceConnection'
   webAppName: 'subrafirstapp'
-  containerRegistry: 'springboot1506'
+  containerRegistry: 'SubraDockerapp'
   imageName: 'spring-boot-demo'
 
 stages:

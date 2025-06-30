@@ -36,7 +36,7 @@ stages:
 
     # ✅ Build the Docker image using the pre-built JAR
     - script: |
-        docker build -t $(containerRegistry).azurecr.io/$(imageName):$(Build.BuildId) ./java-springboot-demo/app
+        docker build -t $(containerRegistry).azurecr.io/$(imageName):$(Build.BuildId) .Java-main/java-springboot-demo/app
       displayName: 'Build Docker Image'
 
     # ✅ Push the Docker image to Azure Container Registry

@@ -14,7 +14,7 @@ stages:
   - job: BuildDockerImage
     displayName: Build Maven Package and Docker Image
     pool:
-      name: Java  # Using self-hosted agent pool
+      vmImage: 'ubuntu-latest'
     steps:
     - script: java -version
       displayName: 'Verify Java Version'
@@ -54,7 +54,8 @@ stages:
     displayName: Deploy Docker Container to Web App
     environment: 'development'
     pool:
-      name: Java  # Self-hosted agent pool
+      vmImage: 'ubuntu-latest'
+      
     strategy:
       runOnce:
         deploy:

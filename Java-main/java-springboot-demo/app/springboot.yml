@@ -3,7 +3,7 @@ trigger:
 
 variables:
   azureSubscription: 'subradocker'
-  webAppName: 'subrafirstapp'
+  webAppName: 'dockerfirst'
   containerRegistry: 'dockerfirstapp'
   imageName: 'spring-boot-demo'
 

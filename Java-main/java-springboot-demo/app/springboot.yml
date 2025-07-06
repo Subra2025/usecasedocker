@@ -2,7 +2,7 @@ trigger:
   - none
 
 variables:
-  azureSubscription: 'SubraDockerServiceConnection'
+  azureSubscription: 'subradocker'
   webAppName: 'subrafirstapp'
   containerRegistry: 'dockerfirstapp'
   imageName: 'spring-boot-demo'
@@ -14,7 +14,7 @@ stages:
   - job: BuildDockerImage
     displayName: Build Maven Package and Docker Image
     pool:
-      vmImage: 'ubuntu-latest'
+      name: 'Default'
     steps:
     - script: java -version
       displayName: 'Verify Java Version'
@@ -54,7 +54,7 @@ stages:
     displayName: Deploy Docker Container to Web App
     environment: 'development'
     pool:
-      vmImage: 'ubuntu-latest'
+      name: 'Default'
       
     strategy:
       runOnce:
